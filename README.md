@@ -98,9 +98,16 @@ Avaliações de dados utilizando métricas e gráficos;
 
 O que eu fiz
 Script de avaliação ('src/evaluate.py') que:
-- lê 'data/processed/dados_limpos.csv';
-- calcula accuracy, precision, recall, f1;
-- salva métricas em 'reports/tables/metricas.csv';
-- salva matriz de confusão em 'reports/figures/matriz_confusao.png'.
+ lê 'data/processed/dados_limpos.csv';
+ calcula accuracy, precision, recall, f1;
+ salva métricas em 'reports/figures';
+ salva matriz de confusão em 'reports/figures/'.
+Preenchimento dos notebooks que:
+ Realiza a análise exploratória de dados;
+ Mostra alguns gráficos com números baseado no arquivo CSV já limpo
+Preenchimento do main.py que:
+ Realiza a execução do código e faz os calculos e gráficos;
+ Mostra as métricas automatizadas;
+ Faz o pipeline funcionar corretamente;
 
 -------------------------------------------------------------------------------------------------------------------------------------
