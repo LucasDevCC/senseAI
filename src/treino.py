@@ -1,9 +1,20 @@
-from model import criar_modelo
+from src.model import criar_modelo
 from sklearn.metrics import accuracy_score
 import joblib
 import os
 
-def treinar_modelo(X_treino, y_treino, X_test, y_test, caminho_modelo='models/model.pkl'):
+def treinar_modelo(
+        X_treino, 
+        y_treino, 
+        X_test, 
+        y_test, 
+        caminho_modelo='models/model.pkl'
+    ):
+    """
+    Treina o modelo, avalia rapidamente e salva o arquivo no disco.
+    Retorna o modelo treinado.
+    """
+
     # 1) cria o modelo
     modelo = criar_modelo()
 
@@ -16,7 +27,8 @@ def treinar_modelo(X_treino, y_treino, X_test, y_test, caminho_modelo='models/mo
     print(f"Acurácia: {acc:.2f}")
 
     # 4) cria a pasta automaticamente antes de salvar
-    os.makedirs(os.path.dirname(caminho_modelo), exist_ok=True)
+    pasta = os.path.dirname(caminho_modelo)
+    os.makedirs(pasta, exist_ok=True)
 
     # 5) salva o modelo
     joblib.dump(modelo, caminho_modelo)

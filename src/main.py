@@ -1,25 +1,28 @@
-# main.py
-from treino import treinar_modelo
-from sklearn.feature_extraction.text import CountVectorizer
-from sklearn.model_selection import train_test_split
+from src.data_prep import preparar_dados_para_treino
+from src.treino import treinar_modelo
+from src.evaluate import avaliar_modelo
+import joblib
+import os
 
-# Exemplo de dados (substitua pelos seus)
-X = [
-    "gostei muito",
-    "odiei",
-    "achei excelente",
-    "péssimo",
-    "muito bom",
-    "horrível"
-]
-y = [1, 0, 1, 0, 1, 0]  # 1 = positivo, 0 = negativo
+def main():
 
-# 1) vetorizar textos -> matrizes numéricas
-vectorizer = CountVectorizer()
-X_vect = vectorizer.fit_transform(X)  # retorna sparse matrix
+    print("\n INICIANDO PIPELINE COMPLETO \n")
 
-# 2) dividir em treino/teste
-X_treino, X_test, y_treino, y_test = train_test_split(X_vect, y, test_size=0.33, random_state=42)
+    # 1) Preparar dados
+    X_train, X_test, y_train, y_test, vectorizer, X_test_textos = preparar_dados_para_treino()
 
-# 3) chamar função de treino
-treinar_modelo(X_treino, y_treino, X_test, y_test)
+    # 2) Treinar modelo
+    modelo = treinar_modelo(X_train, y_train, X_test, y_test)
+
+    # 3) Avaliar modelo (agora corretamente)
+    avaliar_modelo(modelo, X_test, y_test, vectorizer, X_test_textos)
+
+    # 4) Salvar artefatos
+    os.makedirs("models", exist_ok=True)
+    joblib.dump(modelo, "models/model.pkl")
+    joblib.dump(vectorizer, "models/vectorizer.pkl")
+
+    print("\n Pipeline concluído com sucesso.")
+
+if __name__ == "__main__":
+    main()

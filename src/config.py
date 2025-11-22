@@ -1,6 +1,17 @@
 import pandas as pd
-from config.paths import RAW_PATH, PROCESSED_PATH, settings
 import os
+
+settings = {
+    "cleaning": {
+        "drop_columns": [],       # para se for necessario remover colunas
+        "fill_na_method": "ffill",
+        "text_normalization": True,
+        "convert_dates": False
+    }
+}
+
+RAW_PATH = "data/raw/dados_vendas_amazon_ml.csv"
+PROCESSED_PATH = "data/processed/dados_limpos.csv"
 
 def carregar_dados():
     print("Lendo dados brutos...")
@@ -12,16 +23,16 @@ def limpar_dados(df):
     # Remover colunas
     df = df.drop(columns=cfg["drop_columns"], errors="ignore")
 
-    # Tratar valores nulos
+    # Tratar valor nulo
     if cfg["fill_na_method"] == "ffill":
         df = df.fillna(method="ffill").fillna(method="bfill")
 
-    # Normalizar textos
+    # normalizar textos
     if cfg["text_normalization"]:
         for col in df.select_dtypes(include="object"):
             df[col] = df[col].astype(str).str.strip().str.lower()
 
-    # Converter datas
+    # converter datas
     if cfg["convert_dates"]:
         for col in df.columns:
             if "data" in col.lower():
