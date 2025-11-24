@@ -89,30 +89,4 @@ Após ter as bibliotecas instaladas digitar no terminal:
 pip install -r requirements.txt
 python -m src.main
 
----------------------------------------------------------------------------------------------------------------------------------------
-Integrante 2 (Lucas Lima RA 2224100547):
-Avaliações de dados utilizando métricas e gráficos;
 
-O que eu fiz
-Script de avaliação ('src/evaluate.py') que:
- lê 'data/processed/dados_limpos.csv';
- calcula accuracy, precision, recall, f1;
- salva métricas em 'reports/figures';
- salva matriz de confusão em 'reports/figures/'.
-Preenchimento dos notebooks que:
- Realiza a análise exploratória de dados;
- Mostra alguns gráficos com números baseado no arquivo CSV já limpo
-Preenchimento do main.py que:
- Realiza a execução do código e faz os calculos e gráficos;
- Mostra as métricas automatizadas;
- Faz o pipeline funcionar corretamente;
-
--------------------------------------------------------------------------------------------------------------------------------------
-Integrante 4 (Guilherme Henrique 2225107272)
-Organização e entrega final
-
-Oque eu fiz 
-- Revisei códigos 
-- Montei o roteiro para apresentação
-- Atualizei o README.md
-- Mantive as pastas docs ARCHITECTURE.md e ROADMAP.md atualizadas
