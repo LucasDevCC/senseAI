@@ -138,8 +138,10 @@ Mantive os arquivos src/model.py, src/train.py e models/model.pkl organizados e 
 -------------------------------------------------------------------------------------------------------------------------------------
 
 Integrante 1 (Lucas Dias Rocha 2224102285)
+
 Coleta, Limpeza e Preparação dos Dados 
-O que eu fiz
+
+  O que eu fiz
 
 - Organização da estrutura de dados (data/):
 - Coloquei os arquivos brutos em data/raw/, incluindo o arquivo principal dados_vendas_amazon_ml.csv.
