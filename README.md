@@ -119,3 +119,17 @@ Oque eu fiz
 - Montei o roteiro para apresentação
 - Atualizei o README.md
 - Mantive as pastas docs ARCHITECTURE.md e ROADMAP.md atualizadas
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+Integrante 2 (Matheus Dourado Batista 2224101507)
+
+O que eu fiz
+
+Implementei o modelo em src/model.py
+
+Realizei o treino em src/train.py
+
+Ajustei hiperparâmetros e validei as métricas
+
+Mantive os arquivos src/model.py, src/train.py e models/model.pkl organizados e atualizados
