@@ -141,17 +141,17 @@ Integrante 1 (Lucas Dias Rocha 2224102285)
 Coleta, Limpeza e Preparação dos Dados 
 O que eu fiz
 
-Organização da estrutura de dados (data/):
-Coloquei os arquivos brutos em data/raw/, incluindo o arquivo principal dados_vendas_amazon_ml.csv.
-Preparei o diretório data/processed/, onde será salvo o arquivo já limpo e padronizado (dados_limpos.csv).
-Complemento do script de preparação, que:
-Lê os dados originais dentro de data/raw/;
-Remove colunas desnecessárias;
-Corrige tipos de dados incorretos (datas, números, textos);
-Normaliza textos (case, remoção de caracteres especiais, etc.);
-Gera e salva o arquivo limpo data/processed/dados_limpos.csv.
-Mostra estatísticas iniciais do dataset (linhas, colunas, tipos);
-Exibe quantidade de valores nulos e duplicados;
-Apresenta gráficos simples para entender a distribuição dos dados;
+- Organização da estrutura de dados (data/):
+- Coloquei os arquivos brutos em data/raw/, incluindo o arquivo principal dados_vendas_amazon_ml.csv.
+- Preparei o diretório data/processed/, onde será salvo o arquivo já limpo e padronizado (dados_limpos.csv).
+- Complemento do script de preparação, que:
+- Lê os dados originais dentro de data/raw/;
+- Remove colunas desnecessárias;
+- Corrige tipos de dados incorretos (datas, números, textos);
+- Normaliza textos (case, remoção de caracteres especiais, etc.);
+- Gera e salva o arquivo limpo data/processed/dados_limpos.csv.
+- Mostra estatísticas iniciais do dataset (linhas, colunas, tipos);
+- Exibe quantidade de valores nulos e duplicados;
+- Apresenta gráficos simples para entender a distribuição dos dados;
 
  
