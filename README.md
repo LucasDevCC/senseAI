@@ -144,7 +144,7 @@ O que eu fiz
 - Organização da estrutura de dados (data/):
 - Coloquei os arquivos brutos em data/raw/, incluindo o arquivo principal dados_vendas_amazon_ml.csv.
 - Preparei o diretório data/processed/, onde será salvo o arquivo já limpo e padronizado (dados_limpos.csv).
-- Complemento do script de preparação, que:
+- Desenvolvimento do script de preparação, que:
 - Lê os dados originais dentro de data/raw/;
 - Remove colunas desnecessárias;
 - Corrige tipos de dados incorretos (datas, números, textos);
